@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.scss";
+
+const BoxContent = () => {
+  return (
+    <div className="box-content">
+      <h2>Tytuł</h2>
+      <h3>Subtytuł</h3>
+      <div>Jakiś tekst, lorem ipsum dolor sit amet</div>
+    </div>
+  );
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <div className="container">
+        <div className="boxes">
+          <div className="box-wrapper box-wrapper-side box-left">
+            <div className="box">
+              <BoxContent />
+            </div>
+          </div>
+
+          <div className="box-wrapper box-center">
+            <div className="box">
+              <BoxContent />
+            </div>
+          </div>
+
+          <div className="box-wrapper box-wrapper-side box-right">
+            <div className="box">
+              <BoxContent />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
